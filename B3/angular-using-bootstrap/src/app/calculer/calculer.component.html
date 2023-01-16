@@ -1,0 +1,36 @@
+<h1>Calcular</h1>
+<table>
+  <tr>
+    <td colspan="4"><input type="text" [value]='val' style="height: 30px;width: 250px"></td>
+  </tr>
+  <tr>
+    <td><button #btn1 (click)="changeInput(btn1.value)" class="btn btn-secondary" type="text"  value="(">(</button></td>
+    <td><button #btn2 (click)="changeInput(btn2.value)" class="btn btn-secondary" type="text" value=")">)</button></td>
+    <td><button #btn3 (click)="changeInput(btn3.value)" class="btn btn-secondary" type="text" value="%">%</button></td>
+    <td><button (click)="resetVal()" class="btn btn-danger" type="reset" value="reset">AC</button></td>
+  </tr>
+  <tr>
+    <td><button #btn5 (click)="changeInput(btn5.value)" class="btn btn-secondary" type="text" value="7">7</button></td>
+    <td><button #btn6 (click)="changeInput(btn6.value)" class="btn btn-secondary" type="text" value="8">8</button></td>
+    <td><button #btn7 (click)="changeInput(btn7.value)" class="btn btn-secondary" type="text" value="9">9</button></td>
+    <td><button #btn8 (click)="changeInput(btn8.value)" class="btn btn-secondary" type="reset" value="/">/</button></td>
+  </tr>
+  <tr>
+    <td><button #btn9 (click)="changeInput(btn9.value)" class="btn btn-secondary" type="text" value="4">4</button></td>
+    <td><button #btn10 (click)="changeInput(btn10.value)" class="btn btn-secondary" type="text" value="5">5</button></td>
+    <td><button #btn11 (click)="changeInput(btn11.value)" class="btn btn-secondary" type="text" value="6">6</button></td>
+    <td><button #btn12 (click)="changeInput(btn12.value)" class="btn btn-secondary" type="reset" value="*">X</button></td>
+  </tr>
+  <tr>
+    <td><button #btn13 (click)="changeInput(btn13.value)" class="btn btn-secondary" type="text" value="1">1</button></td>
+    <td><button #btn14 (click)="changeInput(btn14.value)" class="btn btn-secondary" type="text" value="2">2</button></td>
+    <td><button #btn15 (click)="changeInput(btn15.value)" class="btn btn-secondary" type="text" value="3">3</button></td>
+    <td><button #btn16 (click)="changeInput(btn16.value)" class="btn btn-secondary" type="reset" value="-">-</button></td>
+  </tr>
+  <tr>
+    <td><button #btn17 (click)="changeInput(btn17.value)" class="btn btn-secondary" type="text" value="0">0</button></td>
+    <td><button #btn18 (click)="changeInput(btn18.value)" class="btn btn-secondary" type="text" value=".">.</button></td>
+    <td><button (click)="endVal()" class="btn btn-secondary" type="text" value="=">=</button></td>
+    <td><button #btn20 (click)="changeInput(btn20.value)" class="btn btn-secondary" type="reset" value="+">+</button></td>
+  </tr>
+</table>
