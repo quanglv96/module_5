@@ -1,13 +1,12 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-calculer',
-  templateUrl: './calculer.component.html',
-  styleUrls: ['./calculer.component.css']
+  selector: 'app-calculate',
+  templateUrl: './calculate.component.html',
+  styleUrls: ['./calculate.component.css']
 })
-export class CalculerComponent {
+export class CalculateComponent {
   val = ""
-
   changeInput(text: any) {
     this.val += text;
   }

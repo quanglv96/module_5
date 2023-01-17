@@ -1,1 +1,7 @@
-<app-calculer></app-calculer>
+<button type="button" (click)=changeCalculate()>Calculate</button>
+<button type="button" (click)=changeProduct()>Product</button>
+<button type="button" (click)=changeArticle()>Article</button>
+<div style="padding-top: 50px">
+<app-calculate [hidden]="calculate"></app-calculate>
+<app-product [hidden]="product"></app-product>
+<app-article [hidden]="article"></app-article></div>
