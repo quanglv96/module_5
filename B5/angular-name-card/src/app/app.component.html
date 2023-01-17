@@ -1,1 +1,6 @@
-<app-name-card cardName="Professional Dev" email="prodev@codegym.vn" phone="0123456789"></app-name-card>
+<button type="button" (click)="changeNameCard()">Name Card</button>
+<button type="button" (click)="changeProgress()">Progress Bar</button>
+<app-name-card cardName="Professional Dev" email="prodev@codegym.vn" phone="0123456789" [hidden]="nameCard"></app-name-card>
+<app-progress-ba progress=0 [hidden]="progress"></app-progress-ba>
+<app-irating-unit></app-irating-unit>
+
