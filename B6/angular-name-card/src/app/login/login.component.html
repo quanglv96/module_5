@@ -1,0 +1,16 @@
+<div>
+  <form (ngSubmit)="checkLogin()" [formGroup]="infoLogin">
+    <div>
+      <label for="user">Username:</label>
+      <input formControlName="user" required name="user" id="user" type="text" class="form-control">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input formControlName="password" required name="password" id="password" type="text" class="form-control">
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success">Login</button>
+    </div>
+  </form>
+</div>
+
