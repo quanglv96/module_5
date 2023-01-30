@@ -1,0 +1,22 @@
+<h1>Add New Product</h1>
+<form class="form-control" [formGroup]="productForm" (ngSubmit)="submit()">
+  <div class="form-control">
+    <label class="form-label" for="id">Mã sản phẩm</label><br>
+    <input type="number" id="id" formControlName="id">
+  </div>
+  <div>
+    <label class="form-label" for="name">Tên sản phẩm</label><br>
+    <input type="text" id="name" formControlName="name">
+  </div>
+  <div>
+    <label class="form-label" for="price">Giá sản phẩm</label><br>
+    <td><input type="text" id="price" formControlName="price">
+  </div>
+  <div>
+    <label class="form-label" for="description">Mô tả sản phẩm</label><br>
+  <input type="text" id="description" formControlName="description">
+  </div>
+  <div>
+    <button type="submit" class="btn btn-success">ADD</button>
+  </div>
+</form>
