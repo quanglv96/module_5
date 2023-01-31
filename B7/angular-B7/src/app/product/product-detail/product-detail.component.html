@@ -1,0 +1,13 @@
+<h2>Detail Product</h2>
+<table class="table table-danger">
+  <tr>
+    <td>Tên</td>
+    <td>Giá</td>
+    <td>Mô tả</td>
+  </tr>
+  <tr *ngIf="productDetail">
+    <td>{{productDetail.name}}</td>
+    <td>{{productDetail.price}}</td>
+    <td>{{productDetail.description}}</td>
+  </tr>
+</table>

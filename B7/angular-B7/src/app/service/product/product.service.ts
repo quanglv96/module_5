@@ -6,27 +6,27 @@ import {Product} from "../../model/product";
 })
 export class ProductService {
   products: Product[] = [{
-    id: 1,
+    id: '1',
     name: 'IPhone 12',
     price: 2400000,
     description: 'New'
   }, {
-    id: 2,
+    id: '2',
     name: 'IPhone 11',
     price: 1560000,
     description: 'Like new'
   }, {
-    id: 3,
+    id: '3',
     name: 'IPhone X',
     price: 968000,
     description: '97%'
   }, {
-    id: 4,
+    id: '4',
     name: 'IPhone 8',
     price: 7540000,
     description: '98%'
   }, {
-    id: 5,
+    id: '5',
     name: 'IPhone 11 Pro',
     price: 1895000,
     description: 'Like new'
@@ -37,5 +37,13 @@ export class ProductService {
   }
   saveProduct(product:Product){
     this.products.push(product)
+  }
+
+  findByID(id: string | null){
+    return this.products.find(item => item.id === id)
+  }
+  removeByID(id: string | null)
+  {
+    this.products=this.products.filter(item => item.id !== id)
   }
 }

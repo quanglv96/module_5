@@ -1,22 +1,43 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../../service/product/product.service";
 import {Product} from "../../model/product";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit{
+export class ProductListComponent implements OnInit {
   products: Product[] = [];
-constructor(private productService:ProductService) {
-}
+  pro:Product|any;
+
+  constructor(
+    private productService: ProductService,
+    private router: Router) {
+  }
 
   ngOnInit(): void {
-  this.getAll();
+    this.getAll();
   }
-  getAll(){
-  this.products= this.productService.getAll();
+
+  getAll() {
+    this.products = this.productService.getAll();
+  }
+
+  getDetail(id: string|any) {
+    this.router.navigateByUrl('/product/detail/' + id);
+  }
+  delete(id: string|any){
+    this.pro=this.productService.findByID(id);
+   if(confirm("are you sure delete "+this.pro.name+"?")){
+     this.productService.removeByID(id);
+     this.getAll();
+     alert("ok")
+   }
+  }
+  getEdit(id: string|any) {
+    this.router.navigateByUrl('/product/create/' + id);
   }
 
 }
