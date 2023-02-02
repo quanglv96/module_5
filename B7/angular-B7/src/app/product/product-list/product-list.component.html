@@ -1,19 +1,25 @@
 <h1>Danh sách sản phẩm</h1>
-<table class="table table-danger">
+<table class="table table-striped">
+  <thead>
   <tr>
     <td>STT</td>
     <td>Tên</td>
     <td>Giá</td>
     <td>Mô tả</td>
+    <td>Thể Loại</td>
     <td colspan="3" style="text-align: center">Active</td>
   </tr>
-  <tr *ngFor="let product of products; index as i">
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products ; index as i">
     <td>{{i + 1}}</td>
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td>{{product.category.name}}</td>
     <td><i class="fa-solid fa-circle-info" (click)="getDetail(product.id)"></i></td>
     <td><i class="fa-solid fa-pen-to-square" (click)="getEdit(product.id)"></i></td>
     <td><i class="fa-solid fa-trash" (click)="delete(product.id)"></i></td>
   </tr>
+  </tbody>
 </table>

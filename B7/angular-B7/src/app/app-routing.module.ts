@@ -34,18 +34,6 @@ const routes: Routes = [
       },
     ]
   },
-  // {
-  //   path: 'product/list',
-  //   component: ProductListComponent
-  // },
-  // {
-  //   path: 'product/create',
-  //   component: ProductCreateComponent
-  // },
-  // {
-  //   path: 'product/detail/:id',
-  //   component: ProductDetailComponent,
-  // },
   {
     path: 'product/delete',
     component: ProductListComponent,

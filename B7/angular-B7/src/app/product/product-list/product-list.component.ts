@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
   }
 
   getAll() {
-    this.products = this.productService.getAll();
+    this.productService.getAll().subscribe(p=>{this.products=p});
   }
 
   getDetail(id: string|any) {
@@ -31,9 +31,8 @@ export class ProductListComponent implements OnInit {
   delete(id: string|any){
     this.pro=this.productService.findByID(id);
    if(confirm("are you sure delete "+this.pro.name+"?")){
-     this.productService.removeByID(id);
-     this.getAll();
-     alert("ok")
+     this.productService.removeByID(id).subscribe(p =>this.getAll())
+
    }
   }
   getEdit(id: string|any) {
